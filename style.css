@@ -7,21 +7,20 @@
 /* ================= ROOT VARIABLES ================= */
 
 :root {
+    --bg: #f1f7f2;
+    --bg-light: #e4f0e7;
+    --card: rgba(255, 255, 255, 0.82);
 
-    --bg: #050914;
-    --bg-light: #0a1120;
-    --card: rgba(12, 22, 40, 0.75);
+    --blue: #3f8f68;
+    --cyan: #68b684;
+    --purple: #7aaa68;
 
-    --blue: #2388ff;
-    --cyan: #19d8ff;
-    --purple: #8b5cf6;
-
-    --text: #f4f7fb;
-    --muted: #91a0b8;
-    --border: rgba(255, 255, 255, 0.09);
+    --text: #1f3327;
+    --muted: #64776b;
+    --border: rgba(47, 92, 64, 0.14);
 
     --shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35);
+        0 20px 60px rgba(47, 92, 64, 0.12);
 
     --radius: 22px;
 }
@@ -46,17 +45,17 @@ body {
     color: var(--text);
 
     background:
-        radial-gradient(
-            circle at 80% 10%,
-            rgba(35, 136, 255, 0.12),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 10% 40%,
-            rgba(139, 92, 246, 0.08),
-            transparent 25%
-        ),
-        var(--bg);
+    radial-gradient(
+        circle at 80% 10%,
+        rgba(104, 182, 132, 0.20),
+        transparent 30%
+    ),
+    radial-gradient(
+        circle at 10% 40%,
+        rgba(122, 170, 104, 0.14),
+        transparent 28%
+    ),
+    var(--bg);
 
     line-height: 1.6;
 
@@ -88,12 +87,12 @@ ol {
 
     background-image:
         linear-gradient(
-            rgba(255,255,255,0.04) 1px,
+            rgba(47, 92, 64, 0.06) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.04) 1px,
+            rgba(47, 92, 64, 0.06) 1px,
             transparent 1px
         );
 
@@ -741,11 +740,11 @@ ol {
 .learning-card {
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(15,27,48,0.85),
-            rgba(7,14,27,0.75)
-        );
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,0.92),
+        rgba(239,248,241,0.88)
+    );
 
     border: 1px solid var(--border);
 
@@ -1792,4 +1791,61 @@ a:focus-visible {
 
         transition-duration: 0.01ms !important;
     }
+}
+/* ================= PROFILE PHOTO ================= */
+
+.profile-card {
+    text-align: center;
+    padding: 30px;
+}
+
+.profile-card img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #8b5cf6;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-card img:hover {
+    transform: scale(1.05);
+}
+
+.profile-card h2 {
+    margin-top: 20px;
+}
+
+.profile-card p {
+    margin-top: 8px;
+}
+
+
+/* ================= PROJECT / CERTIFICATE BUTTONS ================= */
+
+.project-button,
+.certificate-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.project-button {
+    background: #8b5cf6;
+    color: white;
+}
+
+.certificate-button {
+    background: #f3f0ff;
+    color: #6d28d9;
+}
+
+.project-button:hover,
+.certificate-button:hover {
+    transform: translateY(-3px);
 }
